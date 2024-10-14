@@ -1,0 +1,5 @@
+deepgram-sdk
+python-dotenv
+Flask
+flask-cors
+groq 

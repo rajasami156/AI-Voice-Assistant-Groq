@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text and Text to Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Speech to Text and Text to Speech</h1>
+
+        <div>
+            <button id="start-recording">Start Recording</button>
+            <button id="stop-recording" disabled>Stop Recording</button>
+        </div>
+
+        <div id="loader" style="display: none;">
+            <div class="spinner"></div>
+            <p>Processing audio, please wait...</p>
+        </div>
+
+        <div id="output" style="display: none;">
+            <h3>Processed Text:</h3>
+            <pre id="transcript"></pre>
+        </div>
+
+        <div class="audio-player" style="display: none;">
+            <h3>Generated Speech:</h3>
+            <audio id="generated-audio" controls></audio>
+        </div>
+
+        <div id="error-message" style="display: none; color: red;"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
