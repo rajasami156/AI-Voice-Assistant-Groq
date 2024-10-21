@@ -34,6 +34,11 @@ def process_audio_data():
     return send_file(generated_speech, mimetype='audio/mpeg')
 
 
+@app.route("/check", methods=["GET"])
+def check():
+    return "Checking if this endpoint is working or not"
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, port = 8000)
